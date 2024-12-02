@@ -8,4 +8,4 @@ wg_2024 = { git = "https://github.com/WGL-2024/WGL_repo_2024.git", features = ["
 crossbeam="0.8"
 toml="0.8"
 crossbeam-channel="0.5"
-rand="0.8"
+rustafarian-drone = { git = "https://github.com/Rustafarian-Unitn/rustafarian-drone"}
