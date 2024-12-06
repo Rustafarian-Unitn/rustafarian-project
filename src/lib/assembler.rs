@@ -23,7 +23,7 @@ impl Assembler {
         }
     }
 
-
+    //adds the fragment based on the session id and returns it if the message is complete
     pub fn add_fragment(&mut self, fragment:Fragment, session_id:u64)-> Option<Vec<u8>> {
         //check if session id already present or create empty entry with new Vec
         let fragments=self
@@ -34,7 +34,7 @@ impl Assembler {
         //push the fragment in the right vec
         fragments.push(fragment);
 
-        //if the fragments lenght == field total_n_fragments => reassemble message
+        //if the fragments lenght == field total_n_fragments => reassemble message and return
         if let Some(total_fragment) = fragments.first().map(|f| f.total_n_fragments) {
             if fragments.len() == total_fragment as usize{
                 return Some(self.reassemble_message(session_id));
@@ -59,6 +59,6 @@ impl Assembler {
             return message;
         }
 
-        Vec::new()
+        Vec::new() //to fix
     }
 }

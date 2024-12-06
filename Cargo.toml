@@ -9,3 +9,4 @@ crossbeam="0.8"
 toml="0.8"
 crossbeam-channel="0.5"
 rustafarian-drone = { git = "https://github.com/Rustafarian-Unitn/rustafarian-drone", branch = "development"}
+rand="0.8"
