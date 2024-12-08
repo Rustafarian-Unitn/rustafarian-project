@@ -1,3 +1,5 @@
+
+
 use std::collections::HashMap;
 use std::thread::JoinHandle;
 use crossbeam_channel::{Receiver, Sender};
@@ -11,7 +13,7 @@ pub struct SimulationController {
 
     // List of all drones' channels, used by controller to send DroneCommand
     // Communication Controller -> Drone
-    drones: HashMap<NodeId, Sender<DroneCommand>>,
+    pub drones: HashMap<NodeId, Sender<DroneCommand>>,
 
     // Channel where controller listens for Drones Event
     // Communication Drone -> Controller
