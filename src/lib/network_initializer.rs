@@ -32,7 +32,7 @@ impl NetworkInitializer {
         // Fetch config file
         let config: Config;
         if config_file.is_some() { config = Self::parse_config(config_file.unwrap()); }
-        else { config = Self::parse_config("./config2.toml"); }
+        else { config = Self::parse_config("./config3.toml"); }
 
         // Create channels for every node in the network
         let mut packet_channels = HashMap::new();

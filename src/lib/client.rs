@@ -107,7 +107,7 @@ impl Client {
                 },
             };
 
-            let route: Vec<u8> = vec![self.client_id, 1, 2, 3, 5];
+            let route: Vec<u8> = vec![self.client_id, 1, 2, 5, 8];
             let mut hop_index = 1; 
             let packet=Packet{
                 routing_header:SourceRoutingHeader { 

@@ -87,7 +87,7 @@ impl Server {
                     match packet {
                         Ok(packet) => {
                             if let PacketType::MsgFragment(mut fragments) = packet.pack_type {
-                            let content = format!("Messaggio dal client {}", self.server_id).into_bytes();
+                            let content = format!("Messaggio dal server {}", self.server_id).into_bytes();
                             //response fragment
                             let fragment = Fragment {
                                 fragment_index: 0,
@@ -100,7 +100,7 @@ impl Server {
                                 },
                             };
 
-                            let route: Vec<u8> = vec![self.server_id, 3, 2, 1, 4];
+                            let route: Vec<u8> = vec![self.server_id, 5, 2, 1, 7];
                             
 
                             let packet_resp = Packet {
